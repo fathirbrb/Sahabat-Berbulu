@@ -1,0 +1,168 @@
+{
+  "categories": [
+    {
+      "id": "cat-1",
+      "nama": "Makanan Kucing",
+      "jenisHewan": "Kucing"
+    },
+    {
+      "id": "cat-2",
+      "nama": "Makanan Anjing",
+      "jenisHewan": "Anjing"
+    },
+    {
+      "id": "cat-3",
+      "nama": "Mainan & Aksesori",
+      "jenisHewan": "Semua Hewan Peliharaan"
+    },
+    {
+      "id": "cat-4",
+      "nama": "Perawatan & Kebersihan",
+      "jenisHewan": "Semua Hewan Peliharaan"
+    },
+    {
+      "id": "cat-5",
+      "nama": "Tempat Tidur & Kandang",
+      "jenisHewan": "Semua Hewan Peliharaan"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-1",
+      "categoryId": "cat-1",
+      "nama": "Dry Food Salmon Premium 1.2kg",
+      "deskripsi": "Nutrisi salmon alami untuk bulu lembut dan sehat.",
+      "harga": 85000,
+      "stok": 25,
+      "ikon": "🐟",
+      "gambar": "https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "prod-2",
+      "categoryId": "cat-1",
+      "nama": "Wet Food Tuna Pouch 85g",
+      "deskripsi": "Daging tuna segar berkuah lezat untuk kucing.",
+      "harga": 15000,
+      "stok": 50,
+      "ikon": "🥫",
+      "gambar": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "prod-3",
+      "categoryId": "cat-1",
+      "nama": "Biskuit Kucing Lezat 60g",
+      "deskripsi": "Cemilan krispi bergizi favorit kucing kesayangan.",
+      "harga": 25000,
+      "stok": 30,
+      "ikon": "🥩",
+      "gambar": "https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "prod-4",
+      "categoryId": "cat-2",
+      "nama": "Dry Food Chicken & Beef 2kg",
+      "deskripsi": "Protein tinggi untuk energi harian sahabat berbulumu.",
+      "harga": 120000,
+      "stok": 15,
+      "ikon": "🍖",
+      "gambar": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "prod-5",
+      "categoryId": "cat-2",
+      "nama": "Wet Food Sapi Pilihan 400g",
+      "deskripsi": "Daging sapi halus kaya asam lemak omega 3.",
+      "harga": 35000,
+      "stok": 20,
+      "ikon": "🍲",
+      "gambar": "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "prod-6",
+      "categoryId": "cat-3",
+      "nama": "Tongkat Mainan Bulu Kucing",
+      "deskripsi": "Mainan elastis dengan lonceng pemicu keceriaan.",
+      "harga": 18000,
+      "stok": 40,
+      "ikon": "🪶",
+      "gambar": "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "prod-7",
+      "categoryId": "cat-3",
+      "nama": "Harness & Tali Tuntun Ergonomis",
+      "deskripsi": "Empuk dan aman untuk jalan-jalan santai.",
+      "harga": 45000,
+      "stok": 18,
+      "ikon": "🦮",
+      "gambar": "https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "prod-8",
+      "categoryId": "cat-3",
+      "nama": "Bola Bunyi Cit-Cit Anjing",
+      "deskripsi": "Bola karet tahan gigitan melatih kelincahan.",
+      "harga": 22000,
+      "stok": 25,
+      "ikon": "🎾",
+      "gambar": "https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "prod-9",
+      "categoryId": "cat-4",
+      "nama": "Shampo Herbal Anti Kutu 250ml",
+      "deskripsi": "Aroma alami menyegarkan dan merawat kulit sensitif.",
+      "harga": 55000,
+      "stok": 12,
+      "ikon": "🧴",
+      "gambar": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "prod-10",
+      "categoryId": "cat-4",
+      "nama": "Pasir Kucing Lavender 5 Liter",
+      "deskripsi": "Daya gumpal cepat dan bebas bau tidak sedap.",
+      "harga": 48000,
+      "stok": 35,
+      "ikon": "🧹",
+      "gambar": "https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "prod-11",
+      "categoryId": "cat-5",
+      "nama": "Kasur Busa Lembut Size M",
+      "deskripsi": "Bantal bundar ultra-lembut untuk tidur pulas.",
+      "harga": 135000,
+      "stok": 8,
+      "ikon": "🛋️",
+      "gambar": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "prod-12",
+      "categoryId": "cat-5",
+      "nama": "Kandang Lipat Besi Size L",
+      "deskripsi": "Besi kokoh bertingkat yang praktis dibersihkan.",
+      "harga": 275000,
+      "stok": 5,
+      "ikon": "🏠",
+      "gambar": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=600&q=80"
+    }
+  ],
+  "users": [
+    {
+      "id": "usr-admin",
+      "nama": "Admin Sahabat Berbulu",
+      "email": "admin@sahabatberbulu.com",
+      "passwordHash": "3eb3fe66b31e3b4d10fa70b5cad49c7112294af6ae4e476a1c405155d45aa121",
+      "peran": "admin"
+    },
+    {
+      "id": "usr-budi",
+      "nama": "Budi Santoso",
+      "email": "budi@gmail.com",
+      "passwordHash": "a9510eb400d03a0de24c61e6a2cab7c78b6d4c6aad038b6b7a70ec46ada89fcf",
+      "peran": "pelanggan"
+    }
+  ],
+  "orders": []
+}

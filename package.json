@@ -1,0 +1,16 @@
+{
+  "name": "sahabat-berbulu",
+  "version": "1.0.0",
+  "description": "Sahabat Berbulu - Toko Online Kebutuhan Hewan Peliharaan (UTS Web)",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "sahabat-berbulu",
+    "vanilla-js",
+    "uts"
+  ],
+  "author": "",
+  "license": "MIT"
+}

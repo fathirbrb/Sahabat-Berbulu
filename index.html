@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahabat Berbulu — Semua Kebutuhan Hewan Peliharaanmu</title>
+  <meta name="description"
+    content="Toko online terpercaya untuk makanan premium, mainan interaktif, dan semua kebutuhan sahabat berbulumu. Belanja mudah, pengiriman cepat.">
+  <meta name="theme-color" content="#C85428">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <!-- Apple-Style Dynamic Floating Pill Header with Compact Logo -->
+  <div class="header-wrapper" id="header-wrapper">
+    <header class="header-navbar" id="header-navbar">
+      <div class="navbar-container">
+        <!-- Compact Brand Logo (Left) -->
+        <a href="#/katalog" class="brand-logo" id="brand-logo-link">
+          <svg class="brand-logo-svg" width="32" height="32" viewBox="0 0 40 40" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="12" fill="#C85428" />
+            <path
+              d="M20 28.5C23 28.5 25.5 26 25.5 23.2C25.5 21 23.2 20.2 20 21.8C16.8 20.2 14.5 21 14.5 23.2C14.5 26 17 28.5 20 28.5Z"
+              fill="white" />
+            <circle cx="12.5" cy="17.5" r="3" fill="white" />
+            <circle cx="17.2" cy="13" r="3" fill="white" />
+            <circle cx="22.8" cy="13" r="3" fill="white" />
+            <circle cx="27.5" cy="17.5" r="3" fill="white" />
+          </svg>
+          <span class="logo-title">Sahabat Berbulu</span>
+        </a>
+
+        <!-- Center Navigation Links -->
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="#/katalog" class="nav-link active" id="nav-link-katalog">KATALOG</a></li>
+            <li>
+              <a href="#/keranjang" class="nav-link" id="nav-link-keranjang">
+                KERANJANG <span class="cart-badge" id="cart-count-badge">0</span>
+              </a>
+            </li>
+            <li id="nav-item-riwayat"><a href="#/riwayat" class="nav-link" id="nav-link-riwayat">RIWAYAT</a></li>
+            <li id="nav-item-admin" style="display: none;"><a href="#/admin" class="nav-link" id="nav-link-admin">PANEL
+                ADMIN</a></li>
+          </ul>
+        </nav>
+
+        <!-- Right User Nav Box -->
+        <div class="user-nav-box" id="user-nav-box">
+          <!-- Status login akan diisi secara dinamis oleh JavaScript -->
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Main Content Area -->
+  <main class="main-wrapper">
+
+    <!-- VIEW 1: KATALOG (LANDING PAGE) -->
+    <section id="view-katalog" class="view-section active">
+
+      <!-- Minimalist Hero Banner -->
+      <div class="editorial-hero reveal">
+        <div class="hero-content-left">
+          <span class="hero-subtitle-tag">Murni & Natural</span>
+          <h1 class="hero-headline">Nutrisi Terbaik Sahabat Berbulumu.</h1>
+          <p class="hero-paragraph">
+            Makanan bernutrisi, mainan interaktif, dan perawatan pilihan khusus untuk kesehatan serta keceriaan hewan
+            peliharaanmu.
+          </p>
+          <a href="#catalog-section-anchor" class="btn btn-primary">
+            JELAJAHI KATALOG &rarr;
+          </a>
+        </div>
+
+        <div class="hero-illustration-box">
+          <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80"
+            alt="Sahabat Berbulu Hero Image">
+        </div>
+      </div>
+
+      <!-- Feature Strip -->
+      <div class="feature-strip reveal-scale">
+        <div class="feature-item">
+          <div class="feature-item-icon">🍃</div>
+          <div class="feature-item-text">Bahan Organik Pilihan</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">🩺</div>
+          <div class="feature-item-text">Rekomendasi Dokter</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">♻️</div>
+          <div class="feature-item-text">Kemasan Ramah Lingkungan</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">📦</div>
+          <div class="feature-item-text">Pengiriman Cepat</div>
+        </div>
+      </div>
+
+      <!-- Catalog Header & Search Filter Bar -->
+      <div class="catalog-section-header reveal" id="catalog-section-anchor">
+        <div>
+          <span
+            style="font-size: 0.75rem; letter-spacing: 0.12em; font-weight: 800; text-transform: uppercase; color: var(--accent-primary);">Koleksi
+            Kami</span>
+          <h2 class="section-title-large">Produk Pilihan.</h2>
+        </div>
+
+        <div class="catalog-filter-bar">
+          <input type="text" id="search-input" class="form-control" placeholder="Cari nama atau deskripsi produk..."
+            style="min-width: 240px;">
+          <select id="category-filter-select" class="form-control" style="min-width: 180px; display: none;">
+            <option value="">Semua Kategori</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Category Pills Filter Bar -->
+      <div class="category-pills-bar reveal" id="category-pills-container">
+        <!-- Diisi dinamis oleh JS -->
+      </div>
+
+      <div id="product-count-label"
+        style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600; margin-bottom: 1.5rem;" class="reveal">
+        Menampilkan produk...
+      </div>
+
+      <!-- Product Grid Container -->
+      <div class="product-grid" id="product-grid-container">
+        <!-- Diisi oleh JS -->
+      </div>
+
+    </section>
+
+    <!-- VIEW 2: KERANJANG BELANJA & CHECKOUT -->
+    <section id="view-keranjang" class="view-section">
+      <h2 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 1.5rem;">
+        🛒 Keranjang Belanja Anda
+      </h2>
+
+      <div id="cart-content-wrapper">
+        <!-- Diisi oleh JS -->
+      </div>
+    </section>
+
+    <!-- VIEW 3: RIWAYAT PESANAN -->
+    <section id="view-riwayat" class="view-section">
+      <h2 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 1.5rem;">
+        📜 Riwayat Pesanan Saya
+      </h2>
+
+      <div id="orders-history-container">
+        <!-- Diisi oleh JS -->
+      </div>
+    </section>
+
+    <!-- VIEW 4: PANEL ADMIN -->
+    <section id="view-admin" class="view-section">
+      <div
+        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+        <h2 style="font-family: var(--font-heading); font-size: 2rem;">⚙️ Panel Kelola Admin</h2>
+        <button id="btn-reset-demo" class="btn btn-danger btn-sm">
+          🔄 Reset Data Demo (Kondisi Awal)
+        </button>
+      </div>
+
+      <!-- Admin Tabs Navigation -->
+      <div
+        style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
+        <button id="admin-tab-products" class="btn btn-outline btn-sm active" onclick="switchAdminTab('products')">📦
+          Kelola Produk</button>
+        <button id="admin-tab-categories" class="btn btn-outline btn-sm" onclick="switchAdminTab('categories')">🏷️
+          Kelola Kategori</button>
+        <button id="admin-tab-orders" class="btn btn-outline btn-sm" onclick="switchAdminTab('orders')">📑 Kelola
+          Pesanan</button>
+      </div>
+
+      <!-- Admin Tab 1: Products -->
+      <div id="admin-panel-products" class="admin-tab-content">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <h3>Daftar Produk</h3>
+          <button id="btn-open-add-product" class="btn btn-primary btn-sm">➕ Tambah Produk Baru</button>
+        </div>
+        <div class="table-responsive">
+          <table class="custom-table" id="admin-products-table">
+            <thead>
+              <tr>
+                <th>Ikon</th>
+                <th>Nama Produk</th>
+                <th>Kategori</th>
+                <th>Harga</th>
+                <th>Stok</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="admin-products-tbody">
+              <!-- Diisi JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Admin Tab 2: Categories -->
+      <div id="admin-panel-categories" class="admin-tab-content" style="display: none;">
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 1.5rem;">
+          <div
+            style="background: white; padding: 1.5rem; border-radius: var(--border-radius-md); border: 1px solid var(--border-color);">
+            <h4 style="margin-bottom: 1rem; font-family: var(--font-heading);">Tambah Kategori Baru</h4>
+            <form id="form-add-category">
+              <div class="form-group">
+                <label class="form-label" for="cat-name-input">Nama Kategori</label>
+                <input type="text" id="cat-name-input" class="form-control" placeholder="Contoh: Makanan Kelinci"
+                  required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="cat-type-input">Jenis Hewan Peliharaan</label>
+                <input type="text" id="cat-type-input" class="form-control" placeholder="Contoh: Kelinci" required>
+              </div>
+              <button type="submit" class="btn btn-secondary btn-block">Simpan Kategori</button>
+            </form>
+          </div>
+
+          <div class="table-responsive">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nama Kategori</th>
+                  <th>Jenis Hewan</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="admin-categories-tbody">
+                <!-- Diisi JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Admin Tab 3: All Orders -->
+      <div id="admin-panel-orders" class="admin-tab-content" style="display: none;">
+        <h3 style="margin-bottom: 1rem;">Semua Pesanan Pelanggan</h3>
+        <div class="table-responsive">
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>ID Pesanan</th>
+                <th>Pelanggan</th>
+                <th>Tanggal</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Ubah Status</th>
+              </tr>
+            </thead>
+            <tbody id="admin-orders-tbody">
+              <!-- Diisi JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 5: LOGIN -->
+    <section id="view-login" class="view-section">
+      <div class="auth-container">
+        <div class="auth-header">
+          <h2>🔐 Masuk Akun</h2>
+          <p style="color: var(--text-muted); font-size: 0.88rem;">Silakan login ke akun Sahabat Berbulu Anda</p>
+        </div>
+
+        <div class="demo-notice">
+          ℹ️ <strong>Catatan Aplikasi Demo UTS:</strong><br>
+          Semua data tersimpan secara lokal di browser ini. Kata sandi di-hash aman dengan SHA-256 (Web Crypto API).
+        </div>
+
+        <form id="form-login">
+          <div class="form-group">
+            <label class="form-label" for="login-email">Alamat Email</label>
+            <input type="email" id="login-email" class="form-control"
+              placeholder="admin@sahabatberbulu.com atau budi@gmail.com" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="login-password">Kata Sandi</label>
+            <input type="password" id="login-password" class="form-control" placeholder="••••••••" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top: 1rem;">Masuk Sekarang</button>
+        </form>
+
+        <p style="text-align: center; margin-top: 1.25rem; font-size: 0.88rem; color: var(--text-muted);">
+          Belum punya akun? <a href="#/register">Daftar Akun Baru</a>
+        </p>
+
+        <div
+          style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed var(--border-color); font-size: 0.78rem; color: var(--text-light);">
+          <strong>Akun Pengujian Demo:</strong><br>
+          • <strong>Admin:</strong> admin@sahabatberbulu.com / Admin123!<br>
+          • <strong>Pelanggan:</strong> budi@gmail.com / Budi123!
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 6: REGISTER -->
+    <section id="view-register" class="view-section">
+      <div class="auth-container">
+        <div class="auth-header">
+          <h2>📝 Registrasi Akun</h2>
+          <p style="color: var(--text-muted); font-size: 0.88rem;">Buat akun pelanggan baru</p>
+        </div>
+
+        <form id="form-register">
+          <div class="form-group">
+            <label class="form-label" for="reg-nama">Nama Lengkap</label>
+            <input type="text" id="reg-nama" class="form-control" placeholder="Contoh: Siti Rahma" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="reg-email">Alamat Email</label>
+            <input type="email" id="reg-email" class="form-control" placeholder="siti@gmail.com" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="reg-password">Kata Sandi</label>
+            <input type="password" id="reg-password" class="form-control" placeholder="Minimal 6 karakter" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top: 1rem;">Daftar Pelanggan
+            Baru</button>
+        </form>
+
+        <p style="text-align: center; margin-top: 1.25rem; font-size: 0.88rem; color: var(--text-muted);">
+          Sudah punya akun? <a href="#/login">Masuk di sini</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Product Modal (Form Tambah/Edit Produk) -->
+  <div id="modal-product"
+    style="display: none; position: fixed; inset: 0; z-index: 1500; align-items: center; justify-content: center; padding: 1rem;">
+    <div class="modal-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+        <h3 id="modal-product-title" style="font-family: var(--font-heading); font-size: 1.3rem;">Tambah Produk Baru
+        </h3>
+        <button type="button" class="btn btn-outline btn-sm" id="btn-close-modal"
+          onclick="closeProductModal()">✕</button>
+      </div>
+      <form id="form-product-modal">
+        <input type="hidden" id="modal-prod-id">
+
+        <div class="form-group">
+          <label class="form-label" for="modal-prod-nama">Nama Produk</label>
+          <input type="text" id="modal-prod-nama" class="form-control" placeholder="Contoh: Makanan Kucing Premium"
+            required>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="modal-prod-cat">Kategori</label>
+            <select id="modal-prod-cat" class="form-control" required></select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="modal-prod-icon">Ikon Emoji</label>
+            <input type="text" id="modal-prod-icon" class="form-control" placeholder="🐱" required>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="modal-prod-harga">Harga (Rp)</label>
+            <input type="number" id="modal-prod-harga" class="form-control" min="0" placeholder="85000" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="modal-prod-stok">Jumlah Stok</label>
+            <input type="number" id="modal-prod-stok" class="form-control" min="0" placeholder="10" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modal-prod-desc">Deskripsi Produk</label>
+          <textarea id="modal-prod-desc" class="form-control" rows="3"
+            placeholder="Deskripsikan produk secara singkat..."></textarea>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.5rem;">
+          <button type="button" class="btn btn-outline" onclick="closeProductModal()">Batal</button>
+          <button type="submit" class="btn btn-primary" id="btn-submit-product">Simpan Produk</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="footer-content">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+        <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="12" fill="#C85428" />
+          <path
+            d="M20 28.5C23 28.5 25.5 26 25.5 23.2C25.5 21 23.2 20.2 20 21.8C16.8 20.2 14.5 21 14.5 23.2C14.5 26 17 28.5 20 28.5Z"
+            fill="white" />
+          <circle cx="12.5" cy="17.5" r="3" fill="white" />
+          <circle cx="17.2" cy="13" r="3" fill="white" />
+          <circle cx="22.8" cy="13" r="3" fill="white" />
+          <circle cx="27.5" cy="17.5" r="3" fill="white" />
+        </svg>
+        <span
+          style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--text-main);">SAHABAT
+          BERBULU</span>
+      </div>
+      <p style="margin-bottom: 0.4rem;">Semua Kebutuhan Anabul Anda&copy; 2026</p>
+      <!-- <p style="font-size: 0.78rem; color: var(--text-light);">Dibuat dengan HTML, CSS, & Vanilla JavaScript murni untuk
+        Tugas UTS.</p> -->
+    </div>
+  </footer>
+
+  <!-- ── Payment Gateway Modal ────────────────────────────────────────── -->
+  <div id="modal-payment"
+    style="display: none; position: fixed; inset: 0; z-index: 2500; align-items: center; justify-content: center; padding: 1rem;">
+    <div class="payment-gateway-card" id="payment-gateway-card">
+
+      <!-- STEP 1: Payment Details -->
+      <div id="pg-step-details">
+        <div class="pg-header">
+          <div class="pg-logo-badge">
+            <svg width="20" height="20" viewBox="0 0 40 40" fill="none">
+              <rect width="40" height="40" rx="10" fill="#C85428" />
+              <path
+                d="M20 28.5C23 28.5 25.5 26 25.5 23.2C25.5 21 23.2 20.2 20 21.8C16.8 20.2 14.5 21 14.5 23.2C14.5 26 17 28.5 20 28.5Z"
+                fill="white" />
+              <circle cx="12.5" cy="17.5" r="3" fill="white" />
+              <circle cx="17.2" cy="13" r="3" fill="white" />
+              <circle cx="22.8" cy="13" r="3" fill="white" />
+              <circle cx="27.5" cy="17.5" r="3" fill="white" />
+            </svg>
+            <span>SahabatPay</span>
+          </div>
+          <button class="pg-close-btn" id="pg-close-btn" onclick="closePaymentGateway()">✕</button>
+        </div>
+
+        <div class="pg-merchant-info">
+          <span class="pg-merchant-name">Sahabat Berbulu Store</span>
+          <div class="pg-amount" id="pg-amount-display">Rp 0</div>
+          <div class="pg-order-id" id="pg-order-id-display">Order #SB-XXXX</div>
+        </div>
+
+        <!-- Payment Method Tabs -->
+        <div class="pg-method-tabs" id="pg-method-tabs">
+          <button class="pg-method-tab active" id="tab-transfer" onclick="switchPayTab('transfer')">
+            🏦 Transfer Bank
+          </button>
+          <button class="pg-method-tab" id="tab-qris" onclick="switchPayTab('qris')">
+            📱 QRIS
+          </button>
+          <button class="pg-method-tab" id="tab-cod" onclick="switchPayTab('cod')">
+            🚚 COD
+          </button>
+        </div>
+
+        <!-- Method: Bank Transfer -->
+        <div id="pg-panel-transfer" class="pg-method-panel">
+          <p class="pg-instruction">Transfer tepat sesuai nominal ke rekening berikut:</p>
+          <div class="pg-bank-card">
+            <div class="pg-bank-logo bca">BCA</div>
+            <div class="pg-bank-detail">
+              <span class="pg-bank-label">No. Rekening</span>
+              <div class="pg-bank-row">
+                <strong class="pg-bank-number" id="pg-bank-number-bca">1234567890</strong>
+                <button class="pg-copy-btn" onclick="copyToClipboard('1234567890', this)">Salin</button>
+              </div>
+              <span class="pg-bank-label" style="margin-top: 0.5rem;">a.n. Sahabat Berbulu Toko</span>
+            </div>
+          </div>
+          <div class="pg-bank-card" style="margin-top: 0.75rem;">
+            <div class="pg-bank-logo mandiri">MND</div>
+            <div class="pg-bank-detail">
+              <span class="pg-bank-label">No. Rekening</span>
+              <div class="pg-bank-row">
+                <strong class="pg-bank-number">1550098765432</strong>
+                <button class="pg-copy-btn" onclick="copyToClipboard('1550098765432', this)">Salin</button>
+              </div>
+              <span class="pg-bank-label" style="margin-top: 0.5rem;">a.n. Sahabat Berbulu Toko</span>
+            </div>
+          </div>
+          <div class="pg-notice">
+            ⚠️ Pastikan nominal transfer <strong>tepat</strong> sesuai tagihan agar pesanan diproses otomatis.
+          </div>
+        </div>
+
+        <!-- Method: QRIS -->
+        <div id="pg-panel-qris" class="pg-method-panel" style="display:none;">
+          <p class="pg-instruction">Scan QR Code menggunakan aplikasi dompet digital manapun:</p>
+          <div class="pg-qr-wrapper">
+            <canvas id="pg-qr-canvas" width="160" height="160"></canvas>
+          </div>
+          <div style="text-align: center; margin-top: 0.75rem;">
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.25rem;">Didukung oleh</div>
+            <div class="pg-wallet-logos">
+              <span class="wl wl-gopay">GoPay</span>
+              <span class="wl wl-ovo">OVO</span>
+              <span class="wl wl-dana">DANA</span>
+              <span class="wl wl-shopeepay">ShopeePay</span>
+            </div>
+          </div>
+          <div class="pg-qr-timer">
+            QR berlaku selama <strong id="pg-qr-timer">05:00</strong>
+          </div>
+        </div>
+
+        <!-- Method: COD -->
+        <div id="pg-panel-cod" class="pg-method-panel" style="display:none;">
+          <div class="pg-cod-illustration">🚚</div>
+          <h4 style="font-family: var(--font-heading); text-align: center; margin-bottom: 0.5rem;">Bayar di Tempat</h4>
+          <p class="pg-instruction" style="text-align: center;">
+            Kurir kami akan mengantarkan pesanan ke alamatmu. Siapkan uang tunai saat barang tiba.
+          </p>
+          <div class="pg-cod-detail-row">
+            <span>Jenis Pengiriman</span>
+            <strong>Reguler (1-3 Hari)</strong>
+          </div>
+          <div class="pg-cod-detail-row">
+            <span>Biaya Pengiriman</span>
+            <strong>Gratis</strong>
+          </div>
+          <div class="pg-cod-detail-row"
+            style="border-top: 2px solid var(--accent); margin-top: 0.5rem; padding-top: 0.75rem;">
+            <span>Total Dibayar ke Kurir</span>
+            <strong id="pg-cod-total" style="color: var(--accent); font-size: 1.1rem;">Rp 0</strong>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-block" style="margin-top: 1.25rem;" id="pg-confirm-btn"
+          onclick="simulatePaymentProcessing()">
+          💳 Konfirmasi Pembayaran
+        </button>
+      </div>
+
+      <!-- STEP 2: Processing -->
+      <div id="pg-step-processing" style="display:none;" class="pg-step-center">
+        <div class="pg-spinner-ring"></div>
+        <h3 style="font-family: var(--font-heading); margin-top: 1.5rem; font-size: 1.5rem;">Memproses Pembayaran</h3>
+        <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 0.88rem;">Mohon tunggu sebentar...</p>
+        <div class="pg-progress-bar">
+          <div class="pg-progress-fill" id="pg-progress-fill"></div>
+        </div>
+        <p class="pg-processing-status" id="pg-processing-status">Memverifikasi pembayaran...</p>
+      </div>
+
+      <!-- STEP 3: Success -->
+      <div id="pg-step-success" style="display:none;" class="pg-step-center">
+        <div class="pg-success-circle">
+          <svg class="pg-checkmark" viewBox="0 0 52 52">
+            <circle class="pg-checkmark-circle" cx="26" cy="26" r="25" fill="none" />
+            <path class="pg-checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+          </svg>
+        </div>
+        <h3 style="font-family: var(--font-heading); margin-top: 1.25rem; font-size: 1.6rem; color: #166534;">
+          Pembayaran Berhasil!
+        </h3>
+        <p style="color: var(--text-muted); margin-top: 0.4rem; font-size: 0.88rem;">
+          Pesanan kamu telah dikonfirmasi dan sedang diproses.
+        </p>
+        <div class="pg-success-detail" id="pg-success-detail"></div>
+        <p style="font-size: 0.78rem; color: var(--text-light); margin-top: 1rem;">
+          Halaman akan ditutup otomatis...
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Core JavaScript Modules -->
+  <script src="./js/storage.js"></script>
+  <script src="./js/auth.js"></script>
+  <script src="./js/products.js"></script>
+  <script src="./js/cart.js"></script>
+  <script src="./js/orders.js"></script>
+  <script src="./js/admin.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
